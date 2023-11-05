@@ -1,0 +1,56 @@
+@import "../../assets/scss/partials/theme";
+
+.footer {
+  background: map-get($map: $gray, $key: "dark9");
+  color: $white;
+}
+
+.cont {
+  padding-top: map-get($spacing, 32);
+  padding-bottom: 2 * map-get($spacing, 32);
+}
+
+.h2 {
+  @include fs-lh(24);
+  margin: 0;
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) {
+    @include fs-lh(28);
+  }
+}
+
+.contact {
+  @include fs-lh(12);
+  margin: map-get($font, 12) 0;
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) {
+    @include fs-lh(14);
+    margin: map-get($font, 14) 0;
+  }
+}
+
+$icon-width: 1.125em;
+$icon-right-margin: map-get($spacing, 16);
+
+.icon {
+  // Max of all icon widths
+  width: $icon-width !important;
+  margin-right: $icon-right-margin;
+  vertical-align: middle;
+}
+
+.address {
+  div {
+    display: inline-block;
+    vertical-align: text-top;
+    width: calc(100% - #{$icon-width} - #{$icon-right-margin});
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .margin_btm {
+    margin-bottom: 2px;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../../assets/scss/partials/theme";
+
+.cont {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.image {
+  height: 230px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.text {
+  margin-top: map-get($spacing, 16);
+  padding-bottom: map-get($spacing, 16);
+
+  @media (min-width: map-get($map: $breakpoints, $key: "lg")) {
+    padding-top: 100px;
+    height: 400px;
+  }
+}
+
+.h1 {
+  color: map-get($map: $primary, $key: "dark4");
+  margin-bottom: map-get($spacing, 8);
+
+  @media (min-width: map-get($map: $breakpoints, $key: "lg")) {
+    @include fs-lh(64);
+    margin-bottom: map-get($spacing, 16);
+  }
+}
+
+.h2 {
+  font-weight: 300;
+  color: map-get($map: $primary, $key: "normal");
+  
+  @media (max-width: map-get($map: $breakpoints, $key: "lg")) {
+    @include fs-lh(18);
+  }
+}

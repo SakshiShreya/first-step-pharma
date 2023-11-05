@@ -1,0 +1,71 @@
+@import "../../../assets/scss/partials/theme";
+
+.cont {
+  margin: map-get($spacing, 16) (- map-get($spacing, 10));
+  font-size: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title {
+  margin-top: map-get($spacing, 16);
+  margin-bottom: map-get($spacing, 16);
+
+  @media (min-width: map-get($map: $breakpoints, $key: "lg")) {
+    margin-bottom: map-get($spacing, 32);
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link_icon {
+  margin-left: map-get($map: $spacing, $key: 8);
+  height: map-get($map: $font, $key: 14);
+  font-size: map-get($map: $font, $key: 14);
+  vertical-align: middle;
+
+  &:hover {
+    color: $link;
+  }
+}
+
+.card {
+  min-width: 280px;
+  margin: 0 map-get($spacing, 10) map-get($spacing, 20);
+  flex: 1;
+  overflow: hidden;
+
+  @media (min-width: map-get($map: $breakpoints, $key: "sm")) {
+    min-width: 350px;
+  }
+}
+
+.card_filled {
+  border-radius: $border-radius;
+  @include fs-lh(14);
+  outline: 1px solid map-get($map: $gray, $key: light8);
+  transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+  
+  &:hover {
+    @include z3;
+  }
+
+  .head {
+    background-color: map-get($map: $primary, $key: "normal");
+    padding: map-get($spacing, 10) map-get($spacing, 16) map-get($spacing, 8);
+    color: $white;
+    letter-spacing: 0.5px;
+  }
+
+  .desc {
+    padding: map-get($spacing, 16);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: map-get($spacing, 4) map-get($spacing, 16);
+  }
+}
